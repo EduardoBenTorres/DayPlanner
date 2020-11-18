@@ -11,7 +11,9 @@ var timenow = moment().format("k");
 
 
 //Creating a loop that color coordinates hours based on their Id's
-for ( i =9; i<=17; i++){
+for ( i =9; i<18; i++)
+
+{
     if (i<timenow){
     $("#" + i).addClass("past")
     }
