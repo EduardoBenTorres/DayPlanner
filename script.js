@@ -9,22 +9,6 @@ console.log(date);
 var timenow = moment().format("k");
 
 
-
-//Creating a loop that color coordinates hours based on their Id's
-for ( i =9; i<18; i++)
-
-{
-    if (i<timenow){
-    $("#" + i).addClass("past")
-    }
-    else if (i > timenow){
-        $("#" + i).addClass("future")
-    }
-    else{
-        $("#" + i).addClass("present")
-    }
-
-   
 }
 
 //Attempt at creating a save function which stores users input into Local Storage and displays it 
