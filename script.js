@@ -6,20 +6,20 @@ $("#currentDay").append(date);
 console.log(date);
 
 //Creating currentTime variable to be in 24 hour format
-var currentTime = moment().format("k");
-console.log(currentTime);
+var timenow = moment().format("k");
+
 
 
 //Creating a loop that color coordinates hours based on their Id's
 for ( i =9; i<=17; i++){
-    if (i<currentTime){
-    $("#" + i + "todo").addClass("past")
+    if (i<timenow){
+    $("#" + i).addClass("past")
     }
-    else if (i > currentTime){
-        $("#" + i + "todo").addClass("future")
+    else if (i > timenow){
+        $("#" + i).addClass("future")
     }
     else{
-        $("#" + i + "todo").addClass("present")
+        $("#" + i).addClass("present")
     }
 
    
@@ -27,11 +27,7 @@ for ( i =9; i<=17; i++){
 
 //Attempt at creating a save function which stores users input into Local Storage and displays it 
 $(".saveBtn").on("click",function(){
-    var time = $(this).attr("id");
-    var text = $("#" + time + "todo").val();
-    console.log(time,text);
-    localStorage.getItem(time,text);
-    
+   
 
 
 
